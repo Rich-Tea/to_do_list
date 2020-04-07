@@ -1,0 +1,25 @@
+#app {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+  }
+  
+  li {
+    margin: 25px 0;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  li span {
+    padding: 8px;
+  }
+
+  body {
+      background-color: aliceblue;
+  }

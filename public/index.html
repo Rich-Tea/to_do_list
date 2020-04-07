@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/bundle.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item, index in items" v-bind:class="item.isDone ? 'done': 'not-done' ">
+            <span>{{item.task}}</span>
+            <span v-if="item.isDone">Done</span>
+            <button v-if="!item.isDone" v-on:click="doItem(index)">Task Done</button>
+            </li>
+        </ul>
+ <form v-on:submit.prevent="saveNewToDo">
+     <label for="new-item">Add new task</label>
+     <input id="new-item" type="text" v-model="newToDo">
+     <input type="submit" value="Save">
+ </form>
+
+    </div>
+    
+</body>
+</html>
+
+
